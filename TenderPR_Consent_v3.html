@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
+<meta name="description" content="User Consent &amp; Authorisation — TenderPR™ | Empyreal Industries Inc., Maharashtra, India."/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="theme-color" content="#0b1e3d"/>
+<title>Consent &amp; Authorisation — TenderPR™ | Empyreal Industries Inc.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════
+   DESIGN TOKENS — TenderPR™ legal system
+   ═══════════════════════════════════════ */
+:root{
+  --navy:#0b1e3d;  --navy-d:#061129;  --navy-m:#0e2248;
+  --gold:#c9963a;  --gold-d:#a37820;  --gold-l:#e6b855;
+  --teal:#1fa899;  --teal-d:#16786e;
+  --green:#16a34a; --red:#b3261e;
+  --ink:#0f172a;
+  --s900:#1a2540;  --s800:#2c3957;  --s700:#3a4866;  --s600:#475472;
+  --s500:#5b6986;  --s400:#8694b0;  --s300:#b3bdd1;
+  --s200:#dde3ee;  --s100:#eef1f7;  --s50:#f6f8fb;
+  --off:#f4f6fa;   --white:#fff;
+  --serif:'Crimson Pro',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --r-sm:6px;  --r-md:10px;  --r-lg:14px;  --r-xl:20px;
+  --sh-sm:0 1px 2px rgba(11,30,61,.05),0 2px 8px rgba(11,30,61,.06);
+  --sh-md:0 4px 12px rgba(11,30,61,.07),0 12px 28px rgba(11,30,61,.07);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--sans);font-size:15px;color:var(--s800);
+  background:var(--off);line-height:1.7;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+a{color:var(--teal-d);text-decoration:none}
+a:hover{text-decoration:underline}
+strong{color:var(--navy);font-weight:600}
+p{margin:0 0 14px}
+p:last-child{margin-bottom:0}
+ul{padding-left:22px;margin:0 0 14px}
+ul li{margin-bottom:8px;color:var(--s700);font-size:14px;line-height:1.78}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+/* ─── PROGRESS STRIP ─── */
+#prog-strip{position:fixed;top:0;left:0;right:0;height:3px;background:rgba(201,150,58,.14);z-index:200}
+#prog-fill{height:100%;background:linear-gradient(90deg,var(--gold-d),var(--gold-l));width:0;transition:width .35s ease}
+
+/* ─── HEADER ─── */
+.site-header{
+  background:linear-gradient(145deg,var(--navy-d),var(--navy));
+  border-bottom:1px solid rgba(255,255,255,.08);padding:20px 0;
+  position:sticky;top:0;z-index:100;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand-mark{
+  width:38px;height:38px;border-radius:9px;flex-shrink:0;
+  background:linear-gradient(145deg,var(--gold-l),var(--gold-d));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:20px;font-weight:700;color:var(--navy);
+  box-shadow:0 4px 12px rgba(201,150,58,.32),inset 0 1px 0 rgba(255,255,255,.4);
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-family:var(--serif);font-size:20px;font-weight:700;color:#fff}
+.brand-name .tm{color:var(--gold-l)}
+.brand-sub{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.14em;color:rgba(255,255,255,.52);text-transform:uppercase;margin-top:3px}
+.header-meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:rgba(255,255,255,.45);text-transform:uppercase}
+
+/* ─── HERO ─── */
+.hero{
+  background:linear-gradient(145deg,var(--navy-d),var(--navy-m));
+  color:#fff;padding:44px 0 50px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 78% 32%,rgba(201,150,58,.09),transparent 56%),
+             radial-gradient(ellipse at 14% 78%,rgba(31,168,153,.07),transparent 52%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:1}
+.hero-shield{
+  width:58px;height:58px;border-radius:14px;margin-bottom:20px;
+  background:linear-gradient(145deg,rgba(201,150,58,.18),rgba(201,150,58,.06));
+  border:1px solid rgba(201,150,58,.3);
+  display:flex;align-items:center;justify-content:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.16em;
+  color:var(--gold-l);text-transform:uppercase;margin-bottom:18px;
+}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--gold-l);flex-shrink:0}
+.hero h1{
+  font-family:var(--serif);font-size:clamp(1.8rem,5vw,2.75rem);
+  font-weight:700;line-height:1.12;color:#fff;margin:0 0 13px;
+}
+.hero h1 em{color:var(--gold-l);font-style:normal}
+.hero-lede{font-size:14.5px;color:rgba(255,255,255,.76);max-width:560px;line-height:1.8;margin:0 0 22px}
+.badge-row{display:flex;flex-wrap:wrap;gap:8px}
+.badge{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  padding:5px 11px;border-radius:999px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);color:rgba(255,255,255,.82);
+}
+.badge-gold{background:rgba(201,150,58,.14);border-color:rgba(201,150,58,.32);color:var(--gold-l)}
+.badge-teal{background:rgba(31,168,153,.14);border-color:rgba(31,168,153,.3);color:#7ad6cb}
+.badge-green{background:rgba(22,163,74,.14);border-color:rgba(22,163,74,.3);color:#86efac}
+
+/* ─── BODY ─── */
+.consent-body{padding:34px 0 80px}
+
+/* ownership card — matches legal.html exactly */
+.ownership-card{
+  background:var(--white);border:1px solid var(--s200);border-left:4px solid var(--gold);
+  border-radius:var(--r-lg);padding:22px 26px;margin-bottom:28px;box-shadow:var(--sh-sm);
+}
+.ownership-card .oc-label{
+  font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold-d);margin-bottom:9px;
+}
+.ownership-card p{margin:0;font-size:13.5px;color:var(--s700);line-height:1.78}
+
+/* ─── CLAUSE CARDS (read-only, informational) ─── */
+section.clause{
+  background:var(--white);border:1px solid var(--s200);
+  border-radius:var(--r-lg);margin-bottom:14px;
+  box-shadow:var(--sh-sm);overflow:hidden;
+}
+.clause-head{
+  display:flex;align-items:center;gap:14px;padding:20px 22px;
+  cursor:pointer;user-select:none;transition:background .15s;
+}
+.clause-head:hover{background:var(--s50)}
+.clause-num{
+  width:40px;height:40px;border-radius:9px;flex-shrink:0;
+  background:var(--navy);color:var(--gold-l);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:17px;font-weight:700;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+.clause-title{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--navy);margin:0 0 2px;line-height:1.2}
+.clause-sub{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;color:var(--s400);text-transform:uppercase}
+.clause-chevron{color:var(--s300);transition:transform .22s;flex-shrink:0;margin-left:auto}
+.clause-head[aria-expanded="true"] .clause-chevron{transform:rotate(180deg)}
+.clause-body{display:none;border-top:1px solid var(--s100)}
+.clause-body.open{display:block;animation:fadeIn .22s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.clause-content{padding:20px 22px}
+.clause-content p{margin:0 0 12px;color:var(--s700);font-size:14px;line-height:1.82}
+.clause-content p:last-child{margin-bottom:0}
+.clause-content ul{padding-left:20px;margin:8px 0 12px}
+.clause-content ul li{margin-bottom:7px;color:var(--s700);font-size:14px;line-height:1.76}
+.sub-label{
+  display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--gold-d);margin-right:7px;
+}
+
+/* callout boxes */
+.callout{
+  background:linear-gradient(135deg,rgba(201,150,58,.06),rgba(201,150,58,.02));
+  border:1px solid rgba(201,150,58,.28);border-left:3px solid var(--gold);
+  border-radius:var(--r-md);padding:14px 18px;margin:12px 0 0;
+  font-size:14px;color:var(--s800);line-height:1.78;
+}
+.callout strong{color:var(--gold-d)}
+.callout-teal{
+  background:linear-gradient(135deg,rgba(31,168,153,.06),rgba(31,168,153,.02));
+  border-color:rgba(31,168,153,.28);border-left-color:var(--teal);
+}
+.callout-teal strong{color:var(--teal-d)}
+.callout-red{
+  background:linear-gradient(135deg,rgba(179,38,30,.05),rgba(179,38,30,.02));
+  border-color:rgba(179,38,30,.26);border-left-color:var(--red);
+}
+.callout-red strong{color:var(--red)}
+
+/* ─── WHATSAPP CARD (informational, no checkbox) ─── */
+.wa-card{
+  background:linear-gradient(145deg,#0a3828,#062c1e);
+  border:1px solid rgba(37,211,102,.2);border-radius:var(--r-lg);
+  margin-bottom:16px;box-shadow:var(--sh-sm);overflow:hidden;
+}
+.wa-card-head{
+  display:flex;align-items:center;gap:14px;padding:20px 22px 16px;
+  border-bottom:1px solid rgba(37,211,102,.12);
+}
+.wa-icon{
+  width:40px;height:40px;border-radius:9px;flex-shrink:0;
+  background:rgba(37,211,102,.14);border:1px solid rgba(37,211,102,.25);
+  display:flex;align-items:center;justify-content:center;
+}
+.wa-head-title{font-family:var(--serif);font-size:1.12rem;font-weight:600;color:#fff;margin:0 0 2px;line-height:1.2}
+.wa-head-sub{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.42);text-transform:uppercase}
+.wa-body{padding:16px 22px}
+.wa-body p{margin:0 0 8px;font-size:13.5px;color:rgba(255,255,255,.7);line-height:1.78}
+.wa-body p:last-child{margin-bottom:0;font-size:12px;color:rgba(255,255,255,.42);font-style:italic}
+
+/* ─── MASTER CONSENT CARD ─── */
+.master-card{
+  background:var(--white);border:2px solid var(--gold);
+  border-radius:var(--r-lg);margin-bottom:16px;box-shadow:var(--sh-md);
+  overflow:hidden;
+}
+.master-head{
+  display:flex;align-items:flex-start;gap:14px;padding:22px 22px 18px;
+  background:linear-gradient(135deg,rgba(201,150,58,.07),rgba(201,150,58,.02));
+  border-bottom:1px solid rgba(201,150,58,.18);
+}
+.master-icon{
+  width:44px;height:44px;border-radius:11px;flex-shrink:0;
+  background:linear-gradient(145deg,rgba(201,150,58,.18),rgba(201,150,58,.05));
+  border:1px solid rgba(201,150,58,.3);
+  display:flex;align-items:center;justify-content:center;
+}
+.master-title{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin:0 0 3px;line-height:1.2}
+.master-sub{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;color:var(--s400);text-transform:uppercase}
+.master-scope{padding:18px 22px 12px}
+.master-scope>p{font-size:14px;color:var(--s700);line-height:1.8;margin-bottom:14px}
+.scope-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.scope-item{
+  display:flex;align-items:flex-start;gap:11px;
+  padding:11px 14px;background:var(--s50);
+  border:1px solid var(--s200);border-radius:var(--r-md);
+  font-size:13.5px;color:var(--s700);line-height:1.72;
+}
+.scope-item a{color:var(--teal-d)}
+.scope-tag{
+  flex-shrink:0;font-family:var(--mono);font-size:8.5px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:3px 8px;border-radius:999px;margin-top:2px;white-space:nowrap;
+  background:rgba(201,150,58,.13);border:1px solid rgba(201,150,58,.26);color:var(--gold-d);
+}
+/* the single checkbox row */
+.master-check-row{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:20px 22px;cursor:pointer;
+  background:linear-gradient(135deg,rgba(11,30,61,.03),rgba(11,30,61,.01));
+  border-top:1.5px solid rgba(201,150,58,.22);
+  transition:background .15s;
+}
+.master-check-row:hover{background:rgba(201,150,58,.04)}
+.master-check-row input[type="checkbox"]{
+  width:22px;height:22px;min-width:22px;border-radius:6px;
+  cursor:pointer;accent-color:var(--navy);margin-top:1px;flex-shrink:0;
+}
+.master-check-label{font-size:14.5px;color:var(--navy);line-height:1.72;cursor:pointer;font-weight:500}
+.master-check-label a{color:var(--teal-d)}
+.req-star{color:var(--gold-d);font-weight:700;margin-left:2px}
+
+/* ─── SUBMIT CARD ─── */
+.submit-card{
+  background:var(--white);border:1px solid var(--s200);
+  border-radius:var(--r-lg);padding:26px 22px;margin-bottom:16px;box-shadow:var(--sh-sm);
+}
+.submit-note{
+  font-size:13px;color:var(--s500);line-height:1.76;margin-bottom:20px;
+  padding:12px 16px;background:var(--s50);border:1px solid var(--s200);border-radius:var(--r-md);
+}
+.btn-proceed{
+  width:100%;display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 24px;border:none;border-radius:var(--r-lg);cursor:pointer;
+  background:linear-gradient(145deg,var(--navy),var(--navy-d));color:#fff;
+  font-family:var(--sans);font-size:15.5px;font-weight:700;letter-spacing:.01em;
+  box-shadow:0 6px 20px rgba(11,30,61,.3);transition:all .18s;-webkit-appearance:none;
+}
+.btn-proceed:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(11,30,61,.34)}
+.btn-proceed:active{transform:none}
+.btn-back{
+  width:100%;display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 24px;border:1.5px solid var(--s200);border-radius:var(--r-lg);
+  background:transparent;color:var(--s500);font-family:var(--sans);font-size:14px;
+  font-weight:600;cursor:pointer;margin-top:11px;transition:all .16s;-webkit-appearance:none;
+}
+.btn-back:hover{border-color:var(--s300);color:var(--s700)}
+.error-notice{
+  display:none;align-items:flex-start;gap:10px;margin-top:16px;
+  background:rgba(179,38,30,.05);border:1px solid rgba(179,38,30,.24);border-left:3px solid var(--red);
+  border-radius:var(--r-md);padding:13px 17px;
+  font-size:13.5px;color:var(--red);line-height:1.7;
+}
+.error-notice.show{display:flex}
+
+/* ─── SUCCESS SCREEN ─── */
+.success-screen{
+  display:none;text-align:center;
+  background:var(--white);border:1px solid var(--s200);
+  border-radius:var(--r-xl);padding:48px 24px;box-shadow:var(--sh-md);
+  margin-bottom:24px;
+}
+.success-screen.show{display:block;animation:fadeIn .4s ease}
+.success-ring{
+  width:70px;height:70px;border-radius:50%;margin:0 auto 20px;
+  background:rgba(22,163,74,.08);border:2px solid rgba(22,163,74,.28);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 0 8px rgba(22,163,74,.04);
+}
+.success-title{font-family:var(--serif);font-size:1.85rem;font-weight:700;color:var(--navy);margin:0 0 12px}
+.success-body{font-size:14.5px;color:var(--s600);line-height:1.8;max-width:420px;margin:0 auto 22px}
+.success-ref{
+  display:inline-block;font-family:var(--mono);font-size:11.5px;
+  background:var(--s50);border:1px solid var(--s200);border-radius:var(--r-md);
+  padding:12px 20px;color:var(--s700);letter-spacing:.06em;line-height:1.6;
+}
+.ref-label{display:block;font-size:10px;color:var(--s400);text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px}
+
+/* ─── FOOTER ─── */
+.site-footer{
+  background:linear-gradient(145deg,var(--navy-d),var(--navy));
+  color:rgba(255,255,255,.72);padding:46px 0 34px;border-top:3px solid var(--gold);
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:28px}
+.footer-brand{font-family:var(--serif);font-size:24px;font-weight:700;color:#fff;margin-bottom:6px}
+.footer-brand .tm{color:var(--gold-l)}
+.footer-vertical{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--gold-l);margin-bottom:14px}
+.footer-ownership{font-size:13px;color:rgba(255,255,255,.7);line-height:1.78;max-width:480px}
+.footer-ownership strong{color:#fff}
+.footer-ownership a{color:rgba(255,255,255,.75)}
+.site-footer h5{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 14px}
+.site-footer ul{list-style:none;padding:0;margin:0}
+.site-footer li{margin-bottom:8px;font-size:13.5px}
+.site-footer a{color:rgba(255,255,255,.78)}
+.site-footer a:hover{color:var(--gold-l);text-decoration:none}
+.footer-disc{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r-md);padding:15px 20px;margin-bottom:22px;
+  font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.8;
+}
+.footer-bar{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:20px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+  color:rgba(255,255,255,.42);text-transform:uppercase;
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:640px){
+  .hero{padding:32px 0 38px}
+  .hero h1{font-size:1.72rem}
+  .clause-head{padding:17px 18px;gap:12px}
+  .clause-num{width:36px;height:36px;font-size:15px}
+  .clause-content{padding:17px 18px}
+  .master-head{padding:18px 18px 14px;gap:12px}
+  .master-scope{padding:15px 18px 10px}
+  .master-check-row{padding:16px 18px}
+  .scope-item{padding:10px 12px;gap:9px}
+  .scope-tag{font-size:8px;padding:2px 7px}
+  .wa-card-head{padding:17px 18px 13px}
+  .wa-body{padding:14px 18px}
+  .submit-card{padding:20px 18px}
+  .header-meta{display:none}
+  .footer-grid{grid-template-columns:1fr;gap:26px}
+  .footer-bar{flex-direction:column;gap:6px}
+  .badge-row .badge{font-size:9px;padding:4px 9px}
+}
+@media(max-width:400px){
+  .master-check-label{font-size:13.5px}
+}
+</style>
+</head>
+<body>
+
+<!-- Progress -->
+<div id="prog-strip" aria-hidden="true"><div id="prog-fill"></div></div>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" role="banner">
+  <div class="wrap header-row">
+    <a class="brand" href="https://www.tenderpr.in" aria-label="TenderPR™ home">
+      <div class="brand-mark" aria-hidden="true">T</div>
+      <div class="brand-text">
+        <span class="brand-name">TenderPR<span class="tm">™</span></span>
+        <span class="brand-sub">AI-Powered Tender Intelligence</span>
+      </div>
+    </a>
+    <div class="header-meta">Consent &amp; Authorisation · Secure</div>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap hero-inner">
+    <div class="hero-shield" aria-hidden="true">
+      <svg width="29" height="29" viewBox="0 0 32 32" fill="none">
+        <path d="M16 3L5 7.5v7c0 6.9 4.7 13.3 11 15 6.3-1.7 11-8.1 11-15v-7L16 3z"
+              fill="rgba(201,150,58,.18)" stroke="#e6b855" stroke-width="1.4" stroke-linejoin="round"/>
+        <path d="M11 16.5l3.5 3.5 7-8" stroke="#e6b855" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="eyebrow">Consent &amp; Authorisation</div>
+    <h1 id="hero-h">User Consent &amp; <em>Communication Opt-In</em></h1>
+    <p class="hero-lede">By proceeding, the user acknowledges the applicable TenderPR™ policies and consents to the onboarding and communication workflows described below. Please review each section before confirming.</p>
+    <div class="badge-row" role="list">
+      <span class="badge badge-gold" role="listitem">DPDP-Aware</span>
+      <span class="badge badge-teal" role="listitem">Audit-Ready</span>
+      <span class="badge badge-green" role="listitem">Enterprise Onboarding</span>
+      <span class="badge" role="listitem">Maharashtra, India</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MAIN ═══ -->
+<main class="consent-body" id="consent-area">
+<div class="wrap">
+
+  <!-- Platform identity notice -->
+  <article class="ownership-card" role="note" aria-labelledby="oc-lbl">
+    <div class="oc-label" id="oc-lbl">Platform Identity Notice</div>
+    <p>The platform operating under the brand <strong>TenderPR™</strong>, including the current application version <strong>TenderPR™</strong>, is a proprietary product owned and operated by <strong>Empyreal Industries Inc.</strong> ("the Company"), with its principal place of business in Maharashtra, India (GST Reg: <strong>27AHLPG1165C1ZO</strong>), accessible at <a href="https://www.tenderpr.in" target="_blank" rel="noopener">www.tenderpr.in</a>. <strong>A vertical of Empyreal Industries Inc.</strong></p>
+  </article>
+
+  <!-- FORM -->
+  <form id="consent-form" novalidate aria-label="Consent and authorisation form">
+
+    <!-- Hidden CRM / webhook fields — populated upstream by Interakt / Zoho -->
+    <input type="hidden" name="crm_ref_id"         id="h_ref"/>
+    <input type="hidden" name="consent_ts"          id="h_cts"/>
+    <input type="hidden" name="wa_optin_ts"         id="h_wts"/>
+    <input type="hidden" name="lead_source"         id="h_src"    value="WhatsApp-Interakt"/>
+    <input type="hidden" name="page_version"        id="h_ver"    value="v3.0-2026"/>
+    <input type="hidden" name="webhook_event"       id="h_evt"    value="tpr_consent_submitted"/>
+    <input type="hidden" name="all_consents_given"  id="h_all"    value="false"/>
+    <input type="hidden" name="master_consent"      id="h_master" value="false"/>
+
+    <!-- ══════════════════════════════════════════
+         01 — USER CONSENT & ACKNOWLEDGEMENT
+         ══════════════════════════════════════════ -->
+    <section class="clause" id="s01" aria-labelledby="t01">
+      <div class="clause-head" role="button" tabindex="0" aria-expanded="true" aria-controls="b01"
+           onclick="tog('01')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('01')}">
+        <div class="clause-num" aria-hidden="true">01</div>
+        <div style="flex:1;min-width:0">
+          <div class="clause-title" id="t01">User Consent &amp; Acknowledgement</div>
+          <div class="clause-sub">Terms · Privacy · CRM · AI · Documents</div>
+        </div>
+        <svg class="clause-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="clause-body open" id="b01">
+        <div class="clause-content">
+          <p>By proceeding, the user confirms having reviewed, or having been provided access to, the TenderPR™ Terms of Service, Privacy Policy, and Legal Notice, accessible at <a href="https://www.tenderpr.in" target="_blank" rel="noopener">www.tenderpr.in</a>. The user acknowledges the nature, scope, and intended use of the TenderPR™ platform as described in those documents.</p>
+          <div class="callout">
+            <strong>Note:</strong> This acknowledgement is sought on a voluntary and informed basis. Access to the applicable TenderPR™ legal documents has been provided or made available prior to this step.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         02 — COMMUNICATION CONSENT
+         ══════════════════════════════════════════ -->
+    <section class="clause" id="s02" aria-labelledby="t02">
+      <div class="clause-head" role="button" tabindex="0" aria-expanded="false" aria-controls="b02"
+           onclick="tog('02')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('02')}">
+        <div class="clause-num" aria-hidden="true">02</div>
+        <div style="flex:1;min-width:0">
+          <div class="clause-title" id="t02">Communication Consent</div>
+          <div class="clause-sub">WhatsApp · Email · Phone · CRM · Automation</div>
+        </div>
+        <svg class="clause-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="clause-body" id="b02">
+        <div class="clause-content">
+          <p>The user consents to receiving communications from TenderPR™ and its authorised representatives for the purposes of tender intelligence delivery, account management, procurement support, and workflow notifications via:</p>
+          <ul>
+            <li>WhatsApp Business messaging via the TenderPR™ authorised Interakt-integrated channel</li>
+            <li>Email communications from authorised TenderPR™ domains</li>
+            <li>Telephone or video call support, where applicable</li>
+            <li>CRM-triggered workflow notifications and automated pipeline updates</li>
+          </ul>
+          <div class="callout callout-teal">
+            <strong>Right to Update:</strong> The user may contact TenderPR™ at <a href="mailto:info@tenderpr.in">info@tenderpr.in</a> at any time to update communication preferences or withdraw consent for specific channels, without affecting the lawfulness of prior processing.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         03 — DATA PROCESSING CONSENT
+         ══════════════════════════════════════════ -->
+    <section class="clause" id="s03" aria-labelledby="t03">
+      <div class="clause-head" role="button" tabindex="0" aria-expanded="false" aria-controls="b03"
+           onclick="tog('03')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('03')}">
+        <div class="clause-num" aria-hidden="true">03</div>
+        <div style="flex:1;min-width:0">
+          <div class="clause-title" id="t03">Data Processing Consent</div>
+          <div class="clause-sub">Files · Intelligence · CRM · Automation Storage</div>
+        </div>
+        <svg class="clause-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="clause-body" id="b03">
+        <div class="clause-content">
+          <p>The user consents to TenderPR™ processing personal data, company information, and submitted documents for the following intended purposes, in accordance with the Digital Personal Data Protection Act, 2023:</p>
+          <ul>
+            <li>Generating AI-assisted tender intelligence outputs and summaries</li>
+            <li>Performing lead qualification and procurement support workflows</li>
+            <li>Storing interaction records, submitted materials, and workflow history within TenderPR™'s secure data infrastructure</li>
+            <li>Operating and improving automated procurement assistance workflows</li>
+            <li>Maintaining audit logs for compliance, consent tracking, and legal defensibility</li>
+          </ul>
+          <div class="callout">
+            <strong>Processing Basis:</strong> Data is processed on the basis of user consent and for the performance of the intended TenderPR™ service engagement. Processing is limited to the stated purposes.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         04 — AI-ASSISTED WORKFLOW DISCLAIMER
+         ══════════════════════════════════════════ -->
+    <section class="clause" id="s04" aria-labelledby="t04">
+      <div class="clause-head" role="button" tabindex="0" aria-expanded="false" aria-controls="b04"
+           onclick="tog('04')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('04')}">
+        <div class="clause-num" aria-hidden="true">04</div>
+        <div style="flex:1;min-width:0">
+          <div class="clause-title" id="t04">AI-Assisted Workflow Disclaimer</div>
+          <div class="clause-sub">AI Outputs · Verification · Advisory Only</div>
+        </div>
+        <svg class="clause-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="clause-body" id="b04">
+        <div class="clause-content">
+          <div class="callout callout-red">
+            <strong>Important:</strong> TenderPR™ uses AI-assisted systems and automated tools. All AI-generated outputs are <strong>assistive and informational in nature only</strong> — they are not legal, financial, or bidding advice, and do not guarantee any procurement outcome.
+          </div>
+          <p>The user acknowledges that:</p>
+          <ul>
+            <li>AI outputs may contain inaccuracies or omissions and must not be relied upon without independent verification</li>
+            <li>Users must independently verify all tender details from official government procurement portals before acting upon them</li>
+            <li>Official portals (CPPP, GeM, IREPS, state e-procurement systems) remain the authoritative source of truth</li>
+            <li>TenderPR™ does not guarantee the completeness, accuracy, or timeliness of AI-generated outputs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         05 — USER RESPONSIBILITY
+         ══════════════════════════════════════════ -->
+    <section class="clause" id="s05" aria-labelledby="t05">
+      <div class="clause-head" role="button" tabindex="0" aria-expanded="false" aria-controls="b05"
+           onclick="tog('05')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('05')}">
+        <div class="clause-num" aria-hidden="true">05</div>
+        <div style="flex:1;min-width:0">
+          <div class="clause-title" id="t05">User Responsibility</div>
+          <div class="clause-sub">Verification · Decisions · Outcomes</div>
+        </div>
+        <svg class="clause-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="clause-body" id="b05">
+        <div class="clause-content">
+          <ul>
+            <li><span class="sub-label">Verification</span>The user remains solely responsible for verifying all tender information — including eligibility, scope, deadlines, and corrigenda — from official portals before taking any procurement action</li>
+            <li><span class="sub-label">Decisions</span>All procurement decisions, bid strategies, and financial commitments remain at the user's sole discretion. TenderPR™ does not take or recommend specific procurement decisions</li>
+            <li><span class="sub-label">Outcomes</span>TenderPR™ does not guarantee bid success, tender qualification, or contract award. Procurement outcomes are subject to third-party processes beyond TenderPR™'s control</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         06 — NON-GOVERNMENT DISCLAIMER
+         ══════════════════════════════════════════ -->
+    <section class="clause" id="s06" aria-labelledby="t06">
+      <div class="clause-head" role="button" tabindex="0" aria-expanded="false" aria-controls="b06"
+           onclick="tog('06')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('06')}">
+        <div class="clause-num" aria-hidden="true">06</div>
+        <div style="flex:1;min-width:0">
+          <div class="clause-title" id="t06">Non-Government Disclaimer</div>
+          <div class="clause-sub">Independent Private Platform · No Govt. Affiliation</div>
+        </div>
+        <svg class="clause-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="clause-body" id="b06">
+        <div class="clause-content">
+          <div class="callout callout-red">
+            <strong>TenderPR™ is an independent, privately operated platform.</strong> It is NOT affiliated with, endorsed by, or operating under the authority of any government body, ministry, department, PSU, CPPP, GeM, IREPS, or any procurement authority, unless explicitly stated in writing.
+          </div>
+          <p>TenderPR™ is operated by Empyreal Industries Inc., a private company based in Maharashtra, India. No representation made by TenderPR™ constitutes an official communication from any government authority. TenderPR™ does not accept bid submissions, tender fees, or EMD on behalf of any government authority.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         07 — OFFICIAL SOURCE DISCLAIMER
+         ══════════════════════════════════════════ -->
+    <section class="clause" id="s07" aria-labelledby="t07">
+      <div class="clause-head" role="button" tabindex="0" aria-expanded="false" aria-controls="b07"
+           onclick="tog('07')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();tog('07')}">
+        <div class="clause-num" aria-hidden="true">07</div>
+        <div style="flex:1;min-width:0">
+          <div class="clause-title" id="t07">Official Source Disclaimer</div>
+          <div class="clause-sub">Portals as Authoritative Source · Independent Verification</div>
+        </div>
+        <svg class="clause-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="clause-body" id="b07">
+        <div class="clause-content">
+          <p>Official government procurement portals and procuring authorities remain the sole authoritative source of truth for all tender-related information, including original NIT/RFP documents, corrigenda, eligibility criteria, submission deadlines, financial parameters, and award information.</p>
+          <div class="callout callout-teal">
+            <strong>User's Obligation:</strong> All TenderPR™ intelligence outputs must be cross-verified against the original documents on the official procurement portal of the issuing authority before any bid submission, financial commitment, or compliance action is taken.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         WHATSAPP — informational note (no separate checkbox)
+         ══════════════════════════════════════════ -->
+    <div class="wa-card" role="region" aria-labelledby="wa-title">
+      <div class="wa-card-head">
+        <div class="wa-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14" fill="#25d366" opacity=".18"/>
+            <path d="M16 4C9.4 4 4 9.4 4 16c0 2.1.5 4.2 1.5 6L4 28l6.2-1.6A12 12 0 0 0 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4z" fill="#25d366" opacity=".85"/>
+            <path d="M21 19.5c-.3-.15-1.8-.9-2.1-1s-.5-.15-.7.1-.7 1-1 1.1-.3.2-.7.05a9.5 9.5 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.45.15-.6l.45-.5c.1-.15.15-.3.25-.5.1-.2.05-.4-.02-.55-.08-.15-.68-1.6-.93-2.2-.22-.5-.45-.5-.67-.5h-.6c-.2 0-.5.08-.78.4-.28.3-1.06 1-1.06 2.46s1.09 2.85 1.24 3.05c.15.2 2.14 3.25 5.16 4.55.7.3 1.25.5 1.68.62.7.22 1.35.2 1.86.12.57-.1 1.78-.73 2.03-1.44.25-.7.25-1.3.18-1.44-.07-.13-.27-.2-.57-.35z" fill="white"/>
+          </svg>
+        </div>
+        <div>
+          <div class="wa-head-title" id="wa-title">WhatsApp Communication</div>
+          <div class="wa-head-sub">Interakt · Business Messaging · Covered by Master Consent</div>
+        </div>
+      </div>
+      <div class="wa-body">
+        <p>By providing consent below, the user acknowledges and opts in to receiving TenderPR™ service communications via WhatsApp Business — including tender alerts, corrigendum notifications, workflow updates, and support messages — delivered through TenderPR™'s authorised Interakt channel.</p>
+        <p>WhatsApp communications may be withdrawn at any time by messaging <strong>STOP</strong> to the TenderPR™ WhatsApp Business number or by contacting <a href="mailto:info@tenderpr.in" style="color:rgba(255,255,255,.62)">info@tenderpr.in</a>. Standard WhatsApp Business terms apply.</p>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         MASTER CONSENT — single checkbox
+         ══════════════════════════════════════════ -->
+    <div class="master-card" id="master-consent" role="region" aria-labelledby="mc-title">
+      <div class="master-head">
+        <div class="master-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L3 7v5c0 5.25 3.83 10.16 9 11.36C17.17 22.16 21 17.25 21 12V7z"
+                  fill="rgba(201,150,58,.18)" stroke="#e6b855" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M8 12l3 3 5-6" stroke="#e6b855" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="master-title" id="mc-title">Consolidated Consent &amp; Acknowledgement</div>
+          <div class="master-sub">Single acknowledgement covering all applicable TenderPR™ policies</div>
+        </div>
+      </div>
+
+      <div class="master-scope">
+        <p>By checking the box below, the user confirms having reviewed or been provided access to TenderPR™'s Terms of Service, Privacy Policy, and Legal Notice, and acknowledges and consents to each of the following:</p>
+        <ul class="scope-list">
+          <li class="scope-item">
+            <span class="scope-tag">Terms &amp; Privacy</span>
+            Having reviewed or been provided access to the TenderPR™ <a href="https://www.tenderpr.in/terms" target="_blank" rel="noopener">Terms &amp; Conditions</a> and <a href="https://www.tenderpr.in/privacy" target="_blank" rel="noopener">Privacy Policy</a>, and agreeing to be governed by them for use of the platform.
+          </li>
+          <li class="scope-item">
+            <span class="scope-tag">CRM &amp; Data</span>
+            Onboarding into TenderPR™'s CRM and processing of information — including interaction records and submitted documents — for procurement assistance, tender intelligence, and customer support workflows.
+          </li>
+          <li class="scope-item">
+            <span class="scope-tag">Communications</span>
+            Receiving service-related communications via email, phone, WhatsApp Business (Interakt), and CRM-triggered notifications for account management and procurement assistance. Preferences may be updated at any time by contacting <a href="mailto:info@tenderpr.in">info@tenderpr.in</a>.
+          </li>
+          <li class="scope-item">
+            <span class="scope-tag">AI Workflows</span>
+            Acknowledging that TenderPR™ uses AI-assisted tools. All AI-generated outputs are assistive and informational only. The user confirms they will independently verify all critical tender information from official government portals before relying upon it for any procurement decision.
+          </li>
+          <li class="scope-item">
+            <span class="scope-tag">Responsibility</span>
+            Acknowledging that all procurement decisions remain at the user's sole discretion and that TenderPR™ does not guarantee specific outcomes from use of its platform or services.
+          </li>
+          <li class="scope-item">
+            <span class="scope-tag">Platform Status</span>
+            Acknowledging that TenderPR™ is an independent private platform operated by Empyreal Industries Inc. — not affiliated with or authorised by any government body — and that official government procurement portals remain the authoritative source of truth for all tender information.
+          </li>
+        </ul>
+      </div>
+
+      <!-- THE SINGLE MASTER CHECKBOX -->
+      <label class="master-check-row" for="c_master">
+        <input type="checkbox" id="c_master" name="master_consent_given" required aria-required="true" onchange="onMaster()"/>
+        <span class="master-check-label">
+          By proceeding, I confirm that I have reviewed or been provided access to the applicable TenderPR™ legal documents and communication policies. I consent to the processing of my information for TenderPR™ service workflows, acknowledge the AI-assisted nature of the platform, and confirm the terms, communication consent, WhatsApp opt-in, and data processing described above. I understand that this consent may be withdrawn at any time by contacting <a href="mailto:info@tenderpr.in">info@tenderpr.in</a>.<span class="req-star" aria-label="required">*</span>
+        </span>
+      </label>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         SUBMIT
+         ══════════════════════════════════════════ -->
+    <div class="submit-card" aria-label="Form submission">
+      <p class="submit-note">
+        By continuing, the user acknowledges having reviewed or been provided access to the applicable TenderPR™ legal documents and communication policies. This consent record will be logged with a unique reference ID and timestamp for audit and DPDP compliance purposes.
+      </p>
+      <button type="button" class="btn-proceed" id="btn-proceed" onclick="doSubmit()" aria-label="Confirm consent and proceed">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        Proceed with TenderPR™
+      </button>
+      <button type="button" class="btn-back" onclick="doBack()" aria-label="Go back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Go Back / Review
+      </button>
+      <div class="error-notice" id="err-msg" role="alert" aria-live="assertive">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        <span>Please check the consent acknowledgement box before proceeding.</span>
+      </div>
+    </div>
+
+    <!-- Success -->
+    <div class="success-screen" id="success" role="status" aria-live="polite" aria-atomic="true">
+      <div class="success-ring" aria-hidden="true">
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
+          <path d="M10 20l8 8 12-14" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="success-title">Consent Recorded</div>
+      <p class="success-body">Your consent and acknowledgement has been successfully recorded. The TenderPR™ team will be in touch shortly. For any queries, contact <a href="mailto:info@tenderpr.in">info@tenderpr.in</a>.</p>
+      <div class="success-ref" id="sref">
+        <span class="ref-label">Consent Reference</span>
+        Generating…
+      </div>
+    </div>
+
+  </form>
+</div>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">TenderPR<span class="tm">™</span></div>
+        <div class="footer-vertical">A vertical of Empyreal Industries Inc.</div>
+        <p class="footer-ownership">
+          The platform operating under the brand <strong>TenderPR™</strong>, including the current application version <strong>TenderPR™</strong>, is a proprietary product owned and operated by <strong>Empyreal Industries Inc.</strong> ("the Company"), with its principal place of business in Maharashtra, India (GST Reg: <strong>27AHLPG1165C1ZO</strong>), accessible at <a href="https://www.tenderpr.in">www.tenderpr.in</a> and through all associated applications, APIs, and modules.
+        </p>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="https://www.tenderpr.in/legal">Legal Notice</a></li>
+          <li><a href="https://www.tenderpr.in/terms">Terms &amp; Conditions</a></li>
+          <li><a href="https://www.tenderpr.in/privacy">Privacy Policy</a></li>
+          <li><a href="https://www.tenderpr.in/refund">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@tenderpr.in">info@tenderpr.in</a></li>
+          <li><a href="https://www.tenderpr.in">www.tenderpr.in</a></li>
+          <li>Maharashtra, India</li>
+          <li>GST: 27AHLPG1165C1ZO</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-disc">
+      <strong style="color:var(--gold-l)">TenderPR™</strong> is an independent AI-powered tender intelligence platform operated by Empyreal Industries Inc. It is not affiliated with any government authority. Users must independently verify all tender information from official source portals before relying upon it for any procurement action. No AI-generated output from TenderPR™ constitutes legal, financial, or professional advice.
+    </div>
+    <div class="footer-bar">
+      <span>© 2026 Empyreal Industries Inc. · All rights reserved</span>
+      <span>GST: 27AHLPG1165C1ZO · Nagpur, Maharashtra · v3.0</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ── Generate consent reference ID ── */
+function ref(){
+  return 'TPR-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).substr(2,6).toUpperCase();
+}
+
+/* ── Init ── */
+document.addEventListener('DOMContentLoaded',function(){
+  document.getElementById('h_ref').value = ref();
+});
+
+/* ── Accordion ── */
+window.tog = function(n){
+  var h=document.querySelector('#s'+n+' .clause-head');
+  var b=document.getElementById('b'+n);
+  if(!h||!b) return;
+  var o=b.classList.contains('open');
+  b.classList.toggle('open',!o);
+  h.setAttribute('aria-expanded',String(!o));
+};
+
+/* ── Master checkbox ── */
+window.onMaster = function(){
+  var el=document.getElementById('c_master');
+  var pct=(el&&el.checked)?100:0;
+  document.getElementById('prog-fill').style.width=pct+'%';
+  if(el&&el.checked){
+    var now=new Date().toISOString();
+    document.getElementById('h_cts').value=now;
+    document.getElementById('h_wts').value=now;
+  } else {
+    document.getElementById('h_cts').value='';
+    document.getElementById('h_wts').value='';
+  }
+};
+
+/* ── Submit ── */
+window.doSubmit = function(){
+  document.getElementById('err-msg').classList.remove('show');
+  var cb=document.getElementById('c_master');
+  if(!cb||!cb.checked){
+    document.getElementById('err-msg').classList.add('show');
+    setTimeout(function(){
+      document.getElementById('err-msg').scrollIntoView({behavior:'smooth',block:'center'});
+    },80);
+    return;
+  }
+  var now=new Date().toISOString();
+  var rid=document.getElementById('h_ref').value||ref();
+  document.getElementById('h_all').value='true';
+  document.getElementById('h_master').value='true';
+  if(!document.getElementById('h_cts').value){
+    document.getElementById('h_cts').value=now;
+    document.getElementById('h_wts').value=now;
+  }
+
+  /* Payload for webhook / Interakt / Zoho CRM */
+  var payload={
+    crm_ref_id:       rid,
+    consent_ts:       document.getElementById('h_cts').value||now,
+    wa_optin_ts:      document.getElementById('h_wts').value||now,
+    lead_source:      document.getElementById('h_src').value,
+    page_version:     document.getElementById('h_ver').value,
+    webhook_event:    document.getElementById('h_evt').value,
+    all_consents:     true,
+    master_consent:   true,
+    wa_optin:         true,
+    consent_scope:[
+      'terms_conditions','privacy_policy','crm_onboarding',
+      'communications','whatsapp_optin','data_processing',
+      'ai_workflow_disclaimer','user_responsibility',
+      'non_govt_disclaimer','official_source_disclaimer'
+    ]
+  };
+
+  /* ── Set WEBHOOK_URL below for Interakt / Zoho ── */
+  var WEBHOOK_URL='';
+  if(WEBHOOK_URL){
+    fetch(WEBHOOK_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(payload)
+    }).catch(function(e){console.warn('[TenderPR™]',e);});
+  }
+  console.log('[TenderPR™ Consent]',JSON.stringify(payload,null,2));
+
+  /* Show success */
+  document.getElementById('prog-fill').style.width='100%';
+  document.getElementById('consent-area').style.display='none';
+  var ss=document.getElementById('success');
+  ss.classList.add('show');
+  ss.style.display='block';
+  document.getElementById('sref').innerHTML=
+    '<span class="ref-label">Consent Reference</span>'+rid+
+    '<br><span style="font-size:10px;color:var(--s400)">Recorded: '+(document.getElementById('h_cts').value||now).replace('T',' ').substr(0,19)+' UTC</span>';
+  document.documentElement.scrollTop=0;
+};
+
+/* ── Back ── */
+window.doBack = function(){
+  if(window.confirm('Go back? Your inputs will be retained.')){
+    window.history.back();
+  }
+};
+
+})();
+</script>
+</body>
+</html>
